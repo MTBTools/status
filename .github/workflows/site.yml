@@ -24,23 +24,8 @@ jobs:
       - uses: upptime/uptime-monitor@v1.43.1
         with:
           command: "site"
-      - name: Find and upload site output
-        id: find-output
-        run: |
-          EXPORT_DIR=$(find /tmp -type d -name "export" 2>/dev/null | head -1)
-          if [ -z "$EXPORT_DIR" ]; then
-            EXPORT_DIR=$(find . -type d -name "export" -not -path "*/node_modules/*" 2>/dev/null | head -1)
-          fi
-          if [ -z "$EXPORT_DIR" ]; then
-            EXPORT_DIR=$(find /home -type d -name "export" 2>/dev/null | head -1)
-          fi
-          echo "dir=$EXPORT_DIR" >> $GITHUB_OUTPUT
-          echo "Found export dir: $EXPORT_DIR"
-          ls "$EXPORT_DIR" 2>/dev/null || echo "NOT FOUND"
       - uses: actions/upload-pages-artifact@v3
-        if: steps.find-output.outputs.dir != ''
         with:
-          path: ${{ steps.find-output.outputs.dir }}
+          path: site/__sapper__/export
       - id: deployment
-        if: steps.find-output.outputs.dir != ''
         uses: actions/deploy-pages@v4
