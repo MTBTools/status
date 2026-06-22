@@ -113,18 +113,18 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.mitumba.stanl.ink.ico",
     "slug": "vazi-engine",
     "status": "down",
-    "uptime": "99.77%",
-    "uptimeDay": "99.77%",
-    "uptimeWeek": "99.77%",
-    "uptimeMonth": "99.77%",
-    "uptimeYear": "99.77%",
+    "uptime": "27.15%",
+    "uptimeDay": "27.15%",
+    "uptimeWeek": "27.15%",
+    "uptimeMonth": "27.15%",
+    "uptimeYear": "27.15%",
     "time": 0,
     "timeDay": 0,
     "timeWeek": 0,
     "timeMonth": 0,
     "timeYear": 0,
     "dailyMinutesDown": {
-      "2026-06-22": 0
+      "2026-06-22": 157
     }
   },
   {
