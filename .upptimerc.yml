@@ -1,0 +1,88 @@
+owner: MTBTools
+repo: status
+user-agent: "Mitumba Status Monitor"
+
+sites:
+  - name: Marketplace App
+    url: https://app.mitumba.stanl.ink
+    icon: https://cdn.mitumba.stanl.ink/confidential/pitch-deck/icon.png
+    maxResponseTime: 5000
+
+  - name: API Gateway
+    url: https://api.mitumba.stanl.ink/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Auth Service
+    url: https://api.mitumba.stanl.ink/auth/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Listings Service
+    url: https://api.mitumba.stanl.ink/listings/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Orders Service
+    url: https://api.mitumba.stanl.ink/orders/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Payments Service
+    url: https://api.mitumba.stanl.ink/pay/health
+    expectedStatusCodes:
+      - 200
+
+  - name: VAZI Engine
+    url: https://api.mitumba.stanl.ink/vazi/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Search Service
+    url: https://api.mitumba.stanl.ink/search/health
+    expectedStatusCodes:
+      - 200
+
+  - name: Notifications Service
+    url: https://api.mitumba.stanl.ink/notify/health
+    expectedStatusCodes:
+      - 200
+
+  - name: CDN (Images)
+    url: https://cdn.mitumba.stanl.ink
+    expectedStatusCodes:
+      - 200
+      - 404
+
+  - name: Marketing Site
+    url: https://mitumba-marketing.pages.dev
+    maxResponseTime: 5000
+
+status-website:
+  cname: status.mitumba.stanl.ink
+  name: Mitumba Status
+  introTitle: "**Mitumba Platform Status**"
+  introMessage: "Real-time monitoring of all Mitumba services. Updated every 10 minutes."
+  theme: light
+  navbar:
+    - title: Homepage
+      href: https://mitumba.stanl.ink
+    - title: App
+      href: https://app.mitumba.stanl.ink
+
+workflowSchedule:
+  uptime: "*/10 * * * *"
+  graphs: "0 0 * * *"
+  staticSite: "0 0 * * *"
+  summary: "0 0 * * *"
+
+i18n:
+  activeIncidents: "Active Incidents"
+  pastIncidents: "Past Incidents"
+  pastIncidentsResolved: "Resolved"
+  allSystemsOperational: "All systems operational"
+
+commitMessages:
+  statusChange: "🔔 $SITE_NAME is $STATUS"
+  graphsUpdate: "📊 Update response time graphs"
+  summaryUpdate: "📝 Update daily summary"
