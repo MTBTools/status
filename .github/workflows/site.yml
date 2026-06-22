@@ -1,0 +1,29 @@
+name: Static Site CI
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: upptime/status-page@v1.4.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: status-page/output
+      - id: deployment
+        uses: actions/deploy-pages@v4
