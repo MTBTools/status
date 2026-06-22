@@ -26,6 +26,6 @@ jobs:
           command: "site"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: status-page
+          path: __sapper__/export
       - id: deployment
         uses: actions/deploy-pages@v4
