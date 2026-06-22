@@ -1,6 +1,6 @@
 # Mitumba Platform Status
 
-[![Uptime CI](https://github.com/MTBTools/status/actions/workflows/uptime.yml/badge.svg)](https://github.com/MTBTools/status/actions/workflows/uptime.yml)
+[![Uptime CI](https://github.com/MTBTools/status/workflows/Uptime%20CI/badge.svg)](https://github.com/MTBTools/status/actions/workflows/uptime.yml)
 
 > Live status page: [status.mitumba.stanl.ink](https://status.mitumba.stanl.ink)
 
@@ -8,19 +8,19 @@ Real-time monitoring of all Mitumba platform services. Powered by [Upptime](http
 
 ## Monitored Services
 
-| Service | URL |
-|---|---|
-| Marketplace App | `app.mitumba.stanl.ink` |
-| API Gateway | `api.mitumba.stanl.ink/health` |
-| Auth Service | `api.mitumba.stanl.ink/auth/health` |
+| Service          | URL                                     |
+| ---------------- | --------------------------------------- |
+| Marketplace App  | `app.mitumba.stanl.ink`                 |
+| API Gateway      | `api.mitumba.stanl.ink/health`          |
+| Auth Service     | `api.mitumba.stanl.ink/auth/health`     |
 | Listings Service | `api.mitumba.stanl.ink/listings/health` |
-| Orders Service | `api.mitumba.stanl.ink/orders/health` |
-| Payments Service | `api.mitumba.stanl.ink/pay/health` |
-| VAZI Engine | `api.mitumba.stanl.ink/vazi/health` |
-| Search Service | `api.mitumba.stanl.ink/search/health` |
-| Notifications | `api.mitumba.stanl.ink/notify/health` |
-| CDN (Images) | `cdn.mitumba.stanl.ink` |
-| Marketing Site | `mitumba-marketing.pages.dev` |
+| Orders Service   | `api.mitumba.stanl.ink/orders/health`   |
+| Payments Service | `api.mitumba.stanl.ink/pay/health`      |
+| VAZI Engine      | `api.mitumba.stanl.ink/vazi/health`     |
+| Search Service   | `api.mitumba.stanl.ink/search/health`   |
+| Notifications    | `api.mitumba.stanl.ink/notify/health`   |
+| CDN (Images)     | `cdn.mitumba.stanl.ink`                 |
+| Marketing Site   | `mitumba-marketing.pages.dev`           |
 
 ## How It Works
 
