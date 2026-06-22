@@ -71,7 +71,7 @@ status-website:
       href: https://app.mitumba.stanl.ink
 
 workflowSchedule:
-  uptime: "*/10 * * * *"
+  uptime: "*/15 * * * *"
   graphs: "0 0 * * *"
   staticSite: "0 0 * * *"
   summary: "0 0 * * *"
