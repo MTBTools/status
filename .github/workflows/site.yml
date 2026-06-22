@@ -16,17 +16,8 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: upptime/uptime-monitor@v1.43.1
         with:
           command: "site"
-      - run: find . -name "index.html" -not -path "*/node_modules/*" | head -10 && ls -la status-page/ 2>/dev/null || true && ls -la __sapper__/ 2>/dev/null || true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: status-page/__sapper__/export
-      - id: deployment
-        uses: actions/deploy-pages@v4
