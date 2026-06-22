@@ -24,8 +24,9 @@ jobs:
       - uses: upptime/uptime-monitor@v1.43.1
         with:
           command: "site"
+      - run: find . -name "index.html" -not -path "*/node_modules/*" | head -10 && ls -la status-page/ 2>/dev/null || true && ls -la __sapper__/ 2>/dev/null || true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: __sapper__/export
+          path: status-page/__sapper__/export
       - id: deployment
         uses: actions/deploy-pages@v4
