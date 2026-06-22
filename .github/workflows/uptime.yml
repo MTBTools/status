@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   uptime:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - uses: upptime/uptime-monitor@v1.43.1
