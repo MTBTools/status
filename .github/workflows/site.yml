@@ -1,10 +1,9 @@
 name: Static Site CI
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
   workflow_dispatch:
   repository_dispatch:
+    types: [site]
 
 permissions:
   contents: write
