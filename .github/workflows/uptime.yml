@@ -11,11 +11,12 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+
 jobs:
   uptime:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
       - uses: upptime/uptime-monitor@v1.43.1
-        with:
-          token: ${{ secrets.GH_PAT }}
